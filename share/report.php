@@ -65,7 +65,7 @@ tr:nth-child(even) {
     <br>
      <div class="container" >
         <style>
-         background-image: url("header.jpg");
+         background-image: url("img/header.jpg");
  background-color: #cccccc;
         </style>
             
