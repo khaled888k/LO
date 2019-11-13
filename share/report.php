@@ -4,6 +4,7 @@
 <head>
 	 <title> الحي المتعلم </title>
 	 
+    
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -60,7 +61,7 @@ tr:nth-child(even) {
 	<br><br>
     
      
-    
+    <br>
      <div class="container" >
         <style>
          background-image: url("header.jpg");
