@@ -1,4 +1,5 @@
 <?php include("header.php");?>
+<?php include("conn.php");?>
 <!DOCTYPE html>
 <html >
 <head>
@@ -80,7 +81,15 @@ tr:nth-child(even) {
      <option    value="   ">       المركز 2   </option>
 </select>
 
-     
+     <?php
+
+    if(isset($_GET["id"])){
+       
+       $result = mysqli_query($conn, "SELECT * FROM users WHERE u_id=$_GET[id] ");
+    $row = mysqli_fetch_array($result);
+    }
+       ?>
+         
 	<div class="limiter">
 		<div class="container-table100">
 			<div class="wrap-table100">
