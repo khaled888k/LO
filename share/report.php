@@ -112,7 +112,7 @@ tr:nth-child(even) {
 									<td class="column2">1234567890</td>
 									<td class="column3">2019/9/20</td>
 									<td class="column4">طبخ</td>
-									<td class="column5"> <button > تعديل </button></td>
+									<td class="column5"> <button > <a href="update.php?id=<?=$row["u_id"]?>"> تعديل</a></button></td>
 									<td class="column6" > <a href="sertif.html" target="_blank"> طباعه الشهادة</a></td>
                                    
 								</tr>
