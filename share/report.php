@@ -72,7 +72,7 @@ tr:nth-child(even) {
 
     <br><br> 
     
-    <button id="navbarsExampleDefault" > اضافة مستخدم </button>
+     
     
       
 <select  class="btn btn-secondary my-2">
@@ -107,72 +107,7 @@ tr:nth-child(even) {
 									<td class="column6" > <a href="sertif.html" target="_blank"> طباعه الشهادة</a></td>
                                    
 								</tr>
-								<tr>
-									<td class="column1">حصه علي جعفر</td>
-									<td class="column2">1234567890</td>
-									<td class="column3">2019/9/20</td>
-									<td class="column4">طبخ-خياطه</td>
-									<td class="column5"></td>
-                                    <td class="column6"><a href="sertif.html" target="_blank"> طباعه الشهادة</a></td>
-								</tr>
-								 
-								<tr>
-									<td class="column1">لمى علي جعفر</td>
-									<td class="column2">1234567890</td>
-									<td class="column3">2019/9/20</td>
-									<td class="column4">خياطه</td>
-									<td class="column5"></td>
-                                    <td class="column6"> <a href="sertif.html" target="_blank"> طباعه الشهادة</a></td>
-								</tr>
-								 
-								<tr>
-								<td class="column1">هاجر علي عمر</td>
-									<td class="column2">1234567890</td>
-									<td class="column3">2019/9/20</td>
-									<td class="column4">ديكوباج</td>
-									<td class="column5"></td>
-									<td class="column6"> <a href="sertif.html" target="_blank"> طباعه الشهادة</a></td>
-								</tr>
-								 
-								<tr>
-									<td class="column1">هيله عمر عببد الرحمان</td>
-									<td class="column2">1234567890</td>
-									<td class="column3">2019/9/20</td>
-									<td class="column4">مكياج</td>
-									<td class="column5"></td>
-									<td class="column6"><a href="sertif.html" target="_blank"> طباعه الشهادة</a></td>
-								</tr>
-								 
-								<tr>
-								<td class="column1">مريم علي جعفر</td>
-									<td class="column2">1234567890</td>
-									<td class="column3">2019/9/20</td>
-									<td class="column4">طبخ-خياطه</td>
-									<td class="column5"></td>
-									<td class="column6"><a href="sertif.html" target="_blank"> طباعه الشهادة</a></td>
-								</tr>
-								 
-								<tr>
-									<td class="column1">جوهره حسون عمر</td>
-									<td class="column2">1234567890</td>
-									<td class="column3">2019/9/20</td>
-									<td class="column4">حاسب الى</td>
-									<td class="column5"></td>
-									<td class="column6"> <a href="sertif.html" target="_blank"> طباعه الشهادة</a></td>
-								</tr>
-								 
-								<tr>
-									<td class="column1">فهده عبدالعزيز عمر</td>
-									<td class="column2">1234567890</td>
-									<td class="column3">2019/9/20</td>
-									<td class="column4">انجيليزي</td>
-									<td class="column5"></td>
-									<td class="column6"><a href="sertif.html" target="_blank"> طباعه الشهادة</a></td>
-								</tr>
-								 
- 								 
-   
- 
+								
 						</tbody>
 					</table>
 				</div>
