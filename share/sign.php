@@ -158,6 +158,29 @@ a{color:inherit;text-decoration:none}
     </style>
 </head>
 <body>
+       <?php
+if(isset($_POST["name"])){
+    
+    include("conn.php");
+    
+  
+    
+     mysqli_query($conn,"INSERT INTO users (u_fullname,u_mobile,u_email,u_neighborhood,u_education) VALUES ('$_POST[name]','$_POST[number]','$_POST[email]','$_POST[NB]','$_POST[education]')");
+    
+}
+
+?>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <form method="post">
+    
 <div class="login-wrap">
 	<div class="login-html">
 		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab"> دخول </label>
@@ -171,7 +194,7 @@ a{color:inherit;text-decoration:none}
 				</div>
 				<div class="group">
 					<label for="pass" class="label">  كلمة المرور </label>
-					<input id="pass" type="password" class="input" data-type="password">
+					<input id="pass"  type="password" class="input" data-type="password">
 				</div>
 				<div class="group">
 					<input id="check" type="checkbox" class="check" checked>
@@ -188,25 +211,18 @@ a{color:inherit;text-decoration:none}
 			<div class="sign-up-htm">
                 
                             <div class="group">
-					<label for="user" class="label">االأسم الاول</label>
-					<input id="user" type="text" class="input">
+					<label for="user" class="label">االأسم كامل</label>
+					<input id="user" name="name" type="text" class="input">
 				</div>
-                <div class="group">
-					<label for="user" class="label"> أسم الأب </label>
-					<input id="user" type="text" class="input">
-				</div>
-                <div class="group">
-					<label for="user" class="label">أسم العائله</label>
-					<input id="user" type="text" class="input">
-				</div>
+               
 
 			  <div class="group">
 					<label for="user" class="label"> رقم الجوال </label>
-					<input id="user" type="text" class="input">
+					<input id="user" name="number" type="text" class="input">
 				</div>
 				<div class="group">
 					<label for="pass" class="label">  كلمة المرور </label>
-					<input id="pass" type="password" class="input" data-type="password">
+					<input id="pass"  name="pass" type="password" class="input" data-type="password">
 				</div>
 				<div class="group">
 					<label for="pass" class="label"> تأكيد كلمة المرور </label>
@@ -214,15 +230,15 @@ a{color:inherit;text-decoration:none}
 				</div>
 				<div class="group">
 					<label for="pass" class="label">  البريد الإلكتروني </label>
-					<input id="pass" type="text" class="input">
+					<input id="pass" name="email" type="text" class="input">
 				</div>
                 <div class="group">
-					<label for="user" class="label"> الحي </label>
-					<input id="user" type="text" class="input">
+					<label for="user"  class="label"> الحي </label>
+					<input id="user" name="NB" type="text" class="input">
 				</div>
                 <div class="group">
 					<label for="user" class="label"> المؤهل </label>
-					<input id="user" type="text" class="input">
+					<input id="user" name="education" type="text" class="input">
 				</div>
               
 				<div class="group">
@@ -236,5 +252,6 @@ a{color:inherit;text-decoration:none}
 		</div>
 	</div>
 </div>
+        </form>
 </body>
 </html>
