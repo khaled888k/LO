@@ -77,8 +77,21 @@ tr:nth-child(even) {
     
       
 <select  class="btn btn-secondary my-2">
-     <option    value="   ">    المركز 1  </option>
-     <option    value="   ">       المركز 2   </option>
+    
+    <?php
+    
+           $result = mysqli_query($conn, "SELECT * FROM center");
+    while($row = mysqli_fetch_assoc($result)){
+    ?>
+         <option value=""><?= $row["ce_name"] ?></option>
+    
+    <?php
+    }
+    
+    ?>
+    
+    
+
 </select>
 
      <?php
@@ -107,6 +120,17 @@ tr:nth-child(even) {
 							</tr>
 						</thead>
 						<tbody>
+                            
+                            
+     <?php
+
+    
+       
+       $result = mysqli_query($conn, "SELECT * FROM users");
+    $row = mysqli_fetch_array($result);
+    
+       ?>
+                                     
 								<tr>
 									<td class="column1">ريم علي جعفر</td>
 									<td class="column2">1234567890</td>
@@ -116,6 +140,11 @@ tr:nth-child(even) {
 									<td class="column6" > <a href="sertif.html" target="_blank"> طباعه الشهادة</a></td>
                                    
 								</tr>
+                            
+                            
+                            
+                            
+                            
 								
 						</tbody>
 					</table>
