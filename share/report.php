@@ -137,7 +137,7 @@ tr:nth-child(even) {
           <td>  <?=$row['u_neighborhood']?>   </td>;
            
         <td class="column5"> <button > <a href="update.php?id=<?=$row["u_id"]?>"> تعديل</a></button></td>
-									<td class="column6" > <a href="sertif.html" target="_blank"> طباعه الشهادة</a></td>
+									<td class="column6" > <a href="sertif.php?id=<?=$row["u_id"]?>" > طباعه الشهادة</a></td>
        
         
   <?php  }
@@ -150,7 +150,7 @@ tr:nth-child(even) {
 									<td class="column3">2019/9/20</td>
 									<td class="column4">طبخ</td>
 									<td class="column5"> <button > <a href="update.php?id=<?=$row["u_id"]?>"> تعديل</a></button></td>
-									<td class="column6" > <a href="sertif.html" target="_blank"> طباعه الشهادة</a></td>
+									<td class="column6" > <a href="sertif.php" target="_blank"> طباعه الشهادة</a></td>
                                    
 								</tr>
                             
