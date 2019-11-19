@@ -127,9 +127,22 @@ tr:nth-child(even) {
     
        
        $result = mysqli_query($conn, "SELECT * FROM users");
-    $row = mysqli_fetch_array($result);
+    while($row = mysqli_fetch_array($result)){
+        ?>
+       
+        
+          <td>  <?=$row['u_fullname']?>   </td>;
+          <td>  <?=$row['u_birthday']?>   </td>;
+          <td>  <?=$row['u_neighborhood']?>   </td>;
+          <td>  <?=$row['u_neighborhood']?>   </td>;
+           
+        <td class="column5"> <button > <a href="update.php?id=<?=$row["u_id"]?>"> تعديل</a></button></td>
+									<td class="column6" > <a href="sertif.html" target="_blank"> طباعه الشهادة</a></td>
+       
+        
+  <?php  }
     
-       ?>
+        ?>
                                      
 								<tr>
 									<td class="column1">ريم علي جعفر</td>
