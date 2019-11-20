@@ -29,7 +29,7 @@
      اسم الطالبه	 :
         <input type="hidden" name="id" value="<?= $row["u_id"]?>" >
         <br>
-        <input type="text" name="cName" required value="<?= $row["u_fullname"]?>"><br>
+        <input type="text" name="fullname" required value="<?= $row["u_fullname"]?>"><br>
                 <hr>
     الايميل :
          <br>
@@ -61,6 +61,7 @@
         
     
     </form>
+     <input type="submit" value="تعديل">
      <hr>
     <a href="del.php?id=<?= $row["u_id"]?>" style="color:red" onclick="return confirm('هل انت متأكد من حذف  <?= $row["u_fullname"]?>؟ ')">حذف</a>
      
