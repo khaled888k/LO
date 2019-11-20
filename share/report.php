@@ -69,21 +69,28 @@ tr:nth-child(even) {
  background-color: #cccccc;
         </style>
             
-     <img class="bd-placeholder-img card-img-top" width="100%" height="225" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail" src="download.png">
+     <img class="bd-placeholder-img card-img-top" width="100%" height="225" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail" src="img/download.png">
 
     <br><br> 
     
      
     
       
-<select  class="btn btn-secondary my-2">
-    
+<select  class="btn btn-secondary my-2" onchange="location='?ce_id='+value">
+            <option value="">اختر المركز</option>
+
     <?php
     
            $result = mysqli_query($conn, "SELECT * FROM center");
+
     while($row = mysqli_fetch_assoc($result)){
+        $selected = "";
+        if($row["ce_id"] == @$_GET["ce_id"]){
+                $selected = "selected=selected";
+        }
     ?>
-         <option value=""><?= $row["ce_name"] ?></option>
+
+         <option <?= $selected ?> value="<?= $row["ce_id"] ?>"><?= $row["ce_name"] ?></option>
     
     <?php
     }
@@ -94,15 +101,29 @@ tr:nth-child(even) {
 
 </select>
 
-     <?php
-
-    if(isset($_GET["id"])){
-       
-       $result = mysqli_query($conn, "SELECT * FROM users WHERE u_id=$_GET[id] ");
-    $row = mysqli_fetch_array($result);
-    }
-       ?>
+     <?php if(isset($_GET["ce_id"])){ ?>
          
+<select  class="btn btn-secondary my-2" onchange="location='?ce_id=<?= $_GET["ce_id"] ?>&c_id='+value">
+    
+    <?php
+    
+           $result = mysqli_query($conn, "SELECT * FROM classes c , center ce, courses co WHERE ce.ce_id=c.ce_id AND c.co_id = co.co_id AND c.ce_id = $_GET[ce_id]");
+    while($row = mysqli_fetch_assoc($result)){
+    ?>
+         <option value="<?= $row["c_id"] ?>"><?= $row["co_name"] ?></option>
+    
+    <?php
+    }
+    
+    ?>
+    
+    
+
+</select>
+         
+         <?php } ?>
+         
+          <?php if(isset($_GET["c_id"])){ ?>
 	<div class="limiter">
 		<div class="container-table100">
 			<div class="wrap-table100">
@@ -126,35 +147,27 @@ tr:nth-child(even) {
 
     
        
-       $result = mysqli_query($conn, "SELECT * FROM users");
+       $result = mysqli_query($conn, "SELECT * FROM classes c , users u, rigster r  WHERE r.c_id = c.c_id AND u.u_id = r.u_id AND r.c_id = $_GET[c_id]");
     while($row = mysqli_fetch_array($result)){
         ?>
        
-        
+        <tr> 
           <td>  <?=$row['u_fullname']?>   </td>
+          <td>  <?=$row['u_id_number']?>   </td>
           <td>  <?=$row['u_birthday']?>   </td>
           <td>  <?=$row['u_neighborhood']?>   </td>
-          <td>  <?=$row['u_neighborhood']?>   </td>
-           
+            
         <td class="column5"> <button > <a href="update.php?id=<?=$row["u_id"]?>"> تعديل</a></button></td>
 									<td class="column6" > <a href="sertif.php?id=<?=$row["u_id"]?>" > طباعه الشهادة</a></td>
        
-        
+         </tr>
   <?php  }
     
         ?>
                                      
-								<tr>
-									<td class="column1">ريم علي جعفر</td>
-									<td class="column2">1234567890</td>
-									<td class="column3">2019/9/20</td>
-									<td class="column4">طبخ</td>
-									<td class="column5"> <button > <a href="update.php?id=<?=$row["u_id"]?>"> تعديل</a></button></td>
-									<td class="column6" > <a href="sertif.php" target="_blank"> طباعه الشهادة</a></td>
-                                   
-								</tr>
+								 
                             
-                            
+                       <?php } ?>     
                             
                             
                             
