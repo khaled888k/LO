@@ -51,7 +51,7 @@
               <div class="navbar-nav mr-auto">
                 <div class="btn-group">
                   <button  type="button" class="btn btn-sm btn-outline-secondary">تحضير</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">تقارير شامله</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"> <a href="report.php">تقارير شامله</a></button>
                 </div>
                
               </div>
@@ -66,7 +66,7 @@
               <div class="navbar-nav mr-auto">
                 <div class="btn-group">
                    <button type="button" class="btn btn-sm btn-outline-secondary" >تحضير</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">تقارير شامله</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"><a href="report.php">تقارير شامله</a></button>
                 </div>
               
               </div>
@@ -81,7 +81,7 @@
               <div class="navbar-nav mr-auto">
                 <div class="btn-group">
                  <button type="button"  class="btn btn-sm btn-outline-secondary">تحضير</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">تقارير شامله</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"><a href="report.php">تقارير شامله</a></button>
                 </div>
         
               </div>
@@ -97,7 +97,7 @@
               <div class="navbar-nav mr-auto">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary">تحضير</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">تقارير شامله</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"><a href="report.php">تقارير شامله</a></button>
                 </div>
               
               </div>
@@ -112,7 +112,7 @@
               <div class="navbar-nav mr-auto">
                 <div class="btn-group">
                    <button type="button" class="btn btn-sm btn-outline-secondary">تحضير</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">تقارير شامله</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"><a href="report.php">تقارير شامله</a></button>
                 </div>
                 
               </div>
@@ -127,7 +127,7 @@
               <div class="navbar-nav mr-auto">
                 <div class="btn-group">
                    <button type="button" class="btn btn-sm btn-outline-secondary">تحضير</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">تقارير شامله</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"><a href="report.php">تقارير شامله</a></button>
                 </div>
                
               </div>
@@ -143,7 +143,7 @@
               <div class="navbar-nav mr-auto">
                 <div class="btn-group">
                <button type="button" class="btn btn-sm btn-outline-secondary">تحضير</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">تقارير شامله</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"><a href="report.php">تقارير شامله</a></button>
                 </div>
               
               </div>
@@ -158,7 +158,7 @@
               <div class="navbar-nav mr-auto">
                 <div class="btn-group">
                    <button type="button" class="btn btn-sm btn-outline-secondary" >تحضير</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">تقارير شامله</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"><a href="report.php">تقارير شامله</a></button>
                 </div>
              
               </div>
@@ -173,7 +173,7 @@
               <div class="navbar-nav mr-auto">
                 <div class="btn-group">
                     <button type="button" class="btn btn-sm btn-outline-secondary">تحضير</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">تقارير شامله</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"><a href="report.php">تقارير شامله</a></button>
                 </div>
         
               </div>
