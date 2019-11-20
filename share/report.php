@@ -131,10 +131,10 @@ tr:nth-child(even) {
         ?>
        
         
-          <td>  <?=$row['u_fullname']?>   </td>;
-          <td>  <?=$row['u_birthday']?>   </td>;
-          <td>  <?=$row['u_neighborhood']?>   </td>;
-          <td>  <?=$row['u_neighborhood']?>   </td>;
+          <td>  <?=$row['u_fullname']?>   </td>
+          <td>  <?=$row['u_birthday']?>   </td>
+          <td>  <?=$row['u_neighborhood']?>   </td>
+          <td>  <?=$row['u_neighborhood']?>   </td>
            
         <td class="column5"> <button > <a href="update.php?id=<?=$row["u_id"]?>"> تعديل</a></button></td>
 									<td class="column6" > <a href="sertif.php?id=<?=$row["u_id"]?>" > طباعه الشهادة</a></td>
