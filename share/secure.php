@@ -9,6 +9,7 @@ if(@$_SESSION["status"] == "Logged"){
 		
 		
 		
+$user = strtolower($_POST["user"]);
 $pass = crypt($_POST['pass'],	$user);
 include("conn.php");
         
