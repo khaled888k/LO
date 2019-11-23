@@ -214,7 +214,10 @@ if(isset($_POST["name"])){
 					<label for="user" class="label">االأسم كامل</label>
 					<input id="user" name="name" type="text" class="input">
 				</div>
-               
+                 <div class="group">
+					<label for="user" class="label"> السجل المدني </label>
+					<input id="user" name="id_number" type="text" class="input">
+				</div>
 
 			  <div class="group">
 					<label for="user" class="label"> رقم الجوال </label>
