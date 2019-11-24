@@ -165,7 +165,7 @@ if(isset($_POST["name"])){
     
   
     
-     mysqli_query($conn,"INSERT INTO users (u_fullname,u_mobile,u_email,u_neighborhood,u_education) VALUES ('$_POST[name]','$_POST[number]','$_POST[email]','$_POST[NB]','$_POST[education]')");
+     mysqli_query($conn,"INSERT INTO users (u_fullname,u_id_number,u_mobile,u_email,u_neighborhood,u_education) VALUES ('$_POST[name]','$_POST[id_number]','$_POST[number]','$_POST[email]','$_POST[NB]','$_POST[education]')");
     
 }
 
