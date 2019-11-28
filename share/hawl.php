@@ -9,17 +9,18 @@
     <style>
         body {
             background-color: white;
+            text-align:  right;;
         }
 
         h2 {
             color: silver;
 
-            text-align: center;
         }
     </style>
 </head>
 
-<body dir="rtl">
+<body class="rtl">
+    <div class="container"> 
     <br>
     <br>
     <br>
@@ -43,7 +44,7 @@
             <li> الاهتمام برعاية الأمومة والطفولة المبكرة من خلال البرامج التدريبية والتوعوية . </li>
         </ol>
     </a>
-
+</div>
 
 </body>
 
