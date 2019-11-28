@@ -104,13 +104,18 @@ tr:nth-child(even) {
      <?php if(isset($_GET["ce_id"])){ ?>
          
 <select  class="btn btn-secondary my-2" onchange="location='?ce_id=<?= $_GET["ce_id"] ?>&c_id='+value">
+     <option value="">  اختر الدورات  </option>
     
     <?php
     
            $result = mysqli_query($conn, "SELECT * FROM classes c , center ce, courses co WHERE ce.ce_id=c.ce_id AND c.co_id = co.co_id AND c.ce_id = $_GET[ce_id]");
     while($row = mysqli_fetch_assoc($result)){
+          $selected = "";
+        if($row["c_id"] == @$_GET["c_id"]){
+                $selected = "selected=selected";
+        }
     ?>
-         <option value="<?= $row["c_id"] ?>"><?= $row["co_name"] ?></option>
+         <option <?= $selected ?> value="<?= $row["c_id"] ?>"><?= $row["co_name"] ?></option>
     
     <?php
     }
@@ -142,29 +147,36 @@ tr:nth-child(even) {
 						</thead>
 						<tbody>
                             
-                            
+                             
      <?php
 
     
        
        $result = mysqli_query($conn, "SELECT * FROM classes c , users u, rigster r  WHERE r.c_id = c.c_id AND u.u_id = r.u_id AND r.c_id = $_GET[c_id]");
-    while($row = mysqli_fetch_array($result)){
-        ?>
-       
+      while($row = mysqli_fetch_array($result)){
+       echo' 
         <tr> 
-          <td>  <?=$row['u_fullname']?>   </td>
-          <td>  <?=$row['u_id_number']?>   </td>
-          <td>  <?=$row['u_birthday']?>   </td>
-          <td>  <?=$row['u_neighborhood']?>   </td>
-            
-        <td class="column5"> <button > <a href="update.php?id=<?=$row["u_id"]?>"> تعديل</a></button></td>
-									<td class="column6" > <a href="sertif.php?id=<?=$row["u_id"]?>" > طباعه الشهادة</a></td>
-       
+          <td> '.$row['u_fullname'] .'</td>
+          <td> '.$row['u_id_number'].'</td>
+          <td> '.$row['u_birthday'] .'</td>
+          <td style="text-align:right;"> 
+            <ul> ';
+             $result = mysqli_query($conn, "select courses.co_name from courses , users , rigster where users.u_id = rigster.u_id and courses.co_id = rigster.c_id and users.u_id = ".$row["u_id"] ."");
+             while($row2 = mysqli_fetch_array($result)){
+             echo' 
+                <li>'.$row2["co_name"].'</li>
+            ';
+             }
+           echo '</ul>
+          </td>          
+          <td class="column5"><a class="btn btn-md btn-outline-success" href="update.php?id='.$row["u_id"].'"> تعديل</a></td>
+          <td class="column6" ><a class="btn btn-md btn-outline-success" href="sertif.php?id='.$row['u_id'].'"> طباعه الشهادة</a></td>
          </tr>
+         ';
+         ?>
   <?php  }
     
-        ?>
-                                     
+        ?>                    
 								 
                             
                        <?php } ?>     
