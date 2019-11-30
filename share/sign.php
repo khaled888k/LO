@@ -8,7 +8,7 @@
     <style>
     body{
 	margin:0;
-	color:#6a6f8c;
+	color:http://localhost/;
 	background:#c8c8c8;
 	font:600 16px/18px 'Open Sans',sans-serif;
 }
@@ -30,7 +30,7 @@ a{color:inherit;text-decoration:none}
 	height:100%;
 	position:absolute;
 	padding:90px 70px 50px 70px;
-	background:rgba(40,57,101,.9);
+	background:#343a40;
 }
 .login-html .sign-in-htm,
 .login-html .sign-up-htm{
@@ -87,7 +87,7 @@ a{color:inherit;text-decoration:none}
 	border:none;
 	padding:15px 20px;
 	border-radius:25px;
-	background:rgba(255,255,255,.1);
+	background:#212529;
 }
 .login-form .group input[data-type="password"]{
 	text-security:circle;
@@ -98,7 +98,7 @@ a{color:inherit;text-decoration:none}
 	font-size:12px;
 }
 .login-form .group .button{
-	background:#1161ee;
+	background:#6c757d;
 }
 .login-form .group label .icon{
 	width:15px;
@@ -150,7 +150,7 @@ a{color:inherit;text-decoration:none}
 .hr{
 	height:2px;
 	margin:60px 0 50px 0;
-	background:rgba(255,255,255,.2);
+	background:#212529;
 }
 .foot-lnk{
 	text-align:center;
@@ -159,13 +159,13 @@ a{color:inherit;text-decoration:none}
 </head>
 <body>
        <?php
-if(isset($_POST["name"])){
+if(isset($_POST["u_id_number"])){
     
-    include("conn.php");
+include("conn.php");
+ include("cecure.php")
+  $pass = password_hash($_POST["password"], PASSWORD_BCRYPT);
     
-  
-    
-     mysqli_query($conn,"INSERT INTO users (u_fullname,u_id_number,u_mobile,u_email,u_neighborhood,u_education) VALUES ('$_POST[name]','$_POST[id_number]','$_POST[number]','$_POST[email]','$_POST[NB]','$_POST[education]')");
+     mysqli_query($conn,"INSERT INTO users (u_fullname,id_number,u_mobile,u_email,u_neighborhood,u_education) VALUES ('$_POST[name]','$_POST[u_id_number]','$_POST[number]','$_POST[email]','$_POST[NB]','$_POST[education]')");
     
 }
 
