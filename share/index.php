@@ -1,4 +1,5 @@
 <?php include("header.php");?>
+<?php include("conn.php");?>
 <html  ><head>
     
     <title> الحي المتعلم </title>
@@ -74,10 +75,7 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
+
 
 </main>
       
