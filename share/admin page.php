@@ -1,4 +1,6 @@
 <?php include("header.php");?>
+<?php include("conn.php");?>
+
 <html lang="en" dir="rtl">
     <head>
      
