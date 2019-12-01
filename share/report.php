@@ -170,7 +170,7 @@ tr:nth-child(even) {
            echo '</ul>
           </td>          
           <td class="column5"><a class="btn btn-md btn-outline-success" href="update.php?id='.$row["u_id"].'"> تعديل</a></td>
-          <td class="column6" ><a class="btn btn-md btn-outline-success" href="sertif.php?id='.$row['u_id'].'"> طباعه الشهادة</a></td>
+          <td class="column6" ><a class="btn btn-md btn-outline-success" target="_blank"  href="sertif.php?id='.$row['u_id'].'"> طباعه الشهادة</a></td>
          </tr>
          ';
          ?>
@@ -181,8 +181,7 @@ tr:nth-child(even) {
                             
                        <?php } ?>     
                             
-                            
-                            
+                             
 								
 						</tbody>
 					</table>
