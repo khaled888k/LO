@@ -11,6 +11,6 @@ if(isset($_GET["u_id"])){
             echo "trued";
        }
        $c_id = $_GET["course_id"];
-       header("location:attendence.php?course_id="$c_id"");
+       header("location:attendence.php?course_id=$c_id");
 }
 ?>
