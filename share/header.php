@@ -35,15 +35,10 @@
 
                     
                     <br>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">اتصل بي </a>
-                        <div class="dropdown-menu" aria-labelledby="dropdown01">
-                            <a class="dropdown-item" href="https://twitter.com ">توتير</a>
-                            <a class="dropdown-item" href="https://www.instagram.com">انستقرام </a>
-
-                        </div>
+                          <li class="nav-item">
+                        <a class="nav-link" href="contac-%20us.php" target="_blank">اتصل بي</a>
                     </li>
+                    <br>
                    
                 </ul>
                 
