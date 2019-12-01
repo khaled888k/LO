@@ -1,10 +1,9 @@
-<?php include("header.php");?>
 <!DOCTYPE html>
 <html>
 
 <head>
     <title> الحي المتعلم </title>
-
+<?php include("head.php");?>
     <meta charset="UTF-8">
     <style>
         body {
@@ -20,6 +19,8 @@
 </head>
 
 <body class="rtl">
+    <?php include("header.php");?>
+
     <div class="container"> 
     <br>
     <br>

@@ -1,8 +1,7 @@
-<?php include("header.php");?>
-<html>
+ <html>
 <head>
     <title> الحي المتعلم </title>
-
+<?php include("head.php");?>
     
     <style>
     
@@ -53,6 +52,8 @@ textarea {
 [type="submit"]:hover { background:#CC4949; }
     </style>
     <body>
+        <?php include("header.php");?>
+
                     <br>                  
                     <br>
                     <br>

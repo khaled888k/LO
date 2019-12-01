@@ -1,4 +1,3 @@
-<?php include("header.php");?>
 <?php include("conn.php");?>
 
 <!DOCTYPE html>
@@ -20,7 +19,7 @@ if(isset($_GET["update_attendanse"])){
 
 <head>
    <title> الحي المتعلم </title>
- 
+ <?php include("head.php");?>
     <script type="text/javascript">
        function get_statues(us_id){
         <?php
@@ -59,11 +58,8 @@ table.GeneratedTable thead {
 
 <body dir="rtl">
 
+<?php include("header.php");?>
 
-    <header>
-       <?php include("header.php");?>
-
-    </header>
     <br><br><br><br>
      <div class="container" >
         <style>

@@ -1,11 +1,10 @@
-<?php include("header.php");?>
 <?php include("conn.php");?>
 
 <html lang="en" dir="rtl">
     <head>
      
     <title> الحي المتعلم </title>
- 
+ <?php include("head.php");?>s
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -25,6 +24,7 @@
     
   </head>
   <body>
+      <?php include("header.php");?>
     <header>
           
 </header>

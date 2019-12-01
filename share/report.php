@@ -1,11 +1,10 @@
-<?php include("header.php");?>
 <?php include("conn.php");?>
 <!DOCTYPE html>
 <html >
 <head>
 	 <title> الحي المتعلم </title>
 	 
-    
+    <?php include("head.php");?>
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -58,7 +57,8 @@ tr:nth-child(even) {
 </head>
     
 <body  dir="rtl">
-    
+         <?php include("header.php");?>
+
 	<br><br>
     
      

@@ -1,9 +1,10 @@
-<?php include("header.php");?>
-<?php include("conn.php");?>
+ <?php include("conn.php");?>
 <!DOCTYPE html>
 <html>
 <head>
     <title></title>
+    <?php include("head.php");?>
+
     <meta charset="UTF-8">
 
     <style>
@@ -13,6 +14,7 @@
     </style>
 </head>
 <body dir="rtl">
+     <?php include("header.php");?>
 
 <div class="container-fluide" style="margin-top:50px;">
 
