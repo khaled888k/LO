@@ -1,4 +1,6 @@
 <?php include("header.php");?>
+<?php include("conn.php");?>
+
 <html  ><head>
     
     <title> الحي المتعلم </title>
