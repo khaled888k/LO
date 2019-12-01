@@ -1,4 +1,6 @@
 <?php include("header.php");?>
+<?php include("conn.php");?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +10,7 @@
     <style>
     body{
 	margin:0;
-	color:http://localhost/;
+	color:;
 	background:#c8c8c8;
 	font:600 16px/18px 'Open Sans',sans-serif;
 }
@@ -162,7 +164,7 @@ a{color:inherit;text-decoration:none}
 if(isset($_POST["u_id_number"])){
     
 include("conn.php");
- include("cecure.php")
+  
   $pass = password_hash($_POST["password"], PASSWORD_BCRYPT);
     
      mysqli_query($conn,"INSERT INTO users (u_fullname,id_number,u_mobile,u_email,u_neighborhood,u_education) VALUES ('$_POST[name]','$_POST[u_id_number]','$_POST[number]','$_POST[email]','$_POST[NB]','$_POST[education]')");
