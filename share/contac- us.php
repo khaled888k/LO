@@ -12,14 +12,13 @@ body { background:rgb(30,30,40); }
 form { max-width:420px; margin:50px auto; }
 
 .feedback-input {
-  color:white;
+  color:black;
   font-family: Helvetica, Arial, sans-serif;
   font-weight:500;
   font-size: 18px;
   border-radius: 5px;
   line-height: 22px;
-  background-color: transparent;
-  border:2px solid #CC6666;
+   border:2px solid #CC6666;
   transition: all 0.3s;
   padding: 13px;
   margin-bottom: 15px;
@@ -43,7 +42,7 @@ textarea {
   border-radius:5px;
   border:0;
   cursor:pointer;
-  color:white;
+  color:red;
   font-size:24px;
   padding-top:10px;
   padding-bottom:10px;
