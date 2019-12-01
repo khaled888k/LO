@@ -1,3 +1,4 @@
+<?php include("conn.php");?>
 <?php 
 session_start();
 $err = "";
