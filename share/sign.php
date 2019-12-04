@@ -1,8 +1,11 @@
-<?php include("header.php");?>
 <!DOCTYPE html>
 <html>
 <head>
     <title> الحي المتعلم </title>
+
+   
+   <?php include("head.php");?>
+
 
     <meta charset="UTF-8">
     <style>
@@ -158,11 +161,13 @@ a{color:inherit;text-decoration:none}
     </style>
 </head>
 <body>
+    <?php include("header.php");?>
+
        <?php
 if(isset($_POST["u_id_number"])){
     
 include("conn.php");
- include("cecure.php")
+  
   $pass = password_hash($_POST["password"], PASSWORD_BCRYPT);
     
      mysqli_query($conn,"INSERT INTO users (u_fullname,id_number,u_mobile,u_email,u_neighborhood,u_education) VALUES ('$_POST[name]','$_POST[u_id_number]','$_POST[number]','$_POST[email]','$_POST[NB]','$_POST[education]')");
@@ -174,6 +179,12 @@ include("conn.php");
     
     
     
+    <br><br><br><br><br><br><br>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+    
+    
     
     
     
@@ -183,7 +194,7 @@ include("conn.php");
     
 <div class="login-wrap">
 	<div class="login-html">
-		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab"> دخول </label>
+		<input id="tab-1" type="radio" name="tab" class="sign-in" checked=""><label for="tab-1" class="tab"> دخول </label>
 		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab"> تسجيل </label>
 		<div class="login-form">
 			<div class="sign-in-htm">
@@ -194,10 +205,10 @@ include("conn.php");
 				</div>
 				<div class="group">
 					<label for="pass" class="label">  كلمة المرور </label>
-					<input id="pass"  type="password" class="input" data-type="password">
+					<input id="pass" type="password" class="input" data-type="password">
 				</div>
 				<div class="group">
-					<input id="check" type="checkbox" class="check" checked>
+					<input id="check" type="checkbox" class="check" checked="">
 					<label for="check"><span class="icon"></span> تذكرني </label>
 				</div>
 				<div class="group">
@@ -225,7 +236,7 @@ include("conn.php");
 				</div>
 				<div class="group">
 					<label for="pass" class="label">  كلمة المرور </label>
-					<input id="pass"  name="pass" type="password" class="input" data-type="password">
+					<input id="pass" name="pass" type="password" class="input" data-type="password">
 				</div>
 				<div class="group">
 					<label for="pass" class="label"> تأكيد كلمة المرور </label>
@@ -236,7 +247,7 @@ include("conn.php");
 					<input id="pass" name="email" type="text" class="input">
 				</div>
                 <div class="group">
-					<label for="user"  class="label"> الحي </label>
+					<label for="user" class="label"> الحي </label>
 					<input id="user" name="NB" type="text" class="input">
 				</div>
                 <div class="group">
@@ -249,12 +260,17 @@ include("conn.php");
 				</div>
 				<div class="hr"></div>
 				<div class="foot-lnk">
-					<label for="tab-1">مسجل مسبقا؟ سجل دخولك من هنا </a>
-				</div>
+					<label for="tab-1">مسجل مسبقا؟ سجل دخولك من هنا 
+				</label></div>
 			</div>
 		</div>
 	</div>
 </div>
         </form>
+</div>
+		</div>
+	</div>
+    
+    
 </body>
 </html>
