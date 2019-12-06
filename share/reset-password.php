@@ -12,6 +12,13 @@
         <input type="text" name="email" placeholder="ادخل ايميلك هنا... ">
          <button type="submit" name="reset-request-submit">ارسال كلمة المرور الجديده على اليميل</button>       
         </form> 
+        <?php
+        if (isset($_GET["reset"])){
+            if($_GET["reset"] == "success"){
+                echo '<p class="signupsuccess">Check yout e-mail</p>';
+            }
+        }
+        ?>
         
     </section>
     </div>

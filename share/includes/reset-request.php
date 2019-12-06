@@ -9,7 +9,7 @@
       $token = random_bytes(32);
       
       
-      $url = "www.fwf.com/sign/create-new-password.php?selector=" . $selector . "&validator=" . bin2hex($token);
+      $url = "www.fwf.com/forgottenpwd/create-new-password.php?selector=" . $selector . "&validator=" . bin2hex($token);
          , $expires = date("U") + 1800;
       
       
