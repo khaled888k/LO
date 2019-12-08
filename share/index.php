@@ -21,14 +21,14 @@
     </style>
     
   </head>
-  <body>
+  <body class="rtl">
      <?php include("header.php");?>
 
 
 <main role="main">
 
   <section class="jumbotron text-center">
-    <div class="container" >
+    <div class="container"  >
         <style>
          background-image: url("header.jpg");
  background-color: #cccccc;
@@ -49,18 +49,20 @@
 
       <?php
       $q = "select * from courses";
+          
       $result = mysqli_query( $conn,$q );
 
       while($row = mysqli_fetch_array($result)){
         echo ' 
               <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
-                  <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="img/'.$row["course_image"].'" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">'.$row["co_name"].'</text>
+                <div class="card mb-4 shadow-sm" >
+                  <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="img/'.$row["course_image"].'" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect>
+                  <text x="50%" y="50%" fill="#eceeef" dy=".3em" style="text-align:right">'.$row["co_name"].'</text>
                   <div class="card-body">
                     <div class="navbar-nav mr-auto">
                       <div class="btn-group">
                        <a  href="show_course_detail.php?co_id='.$row['co_id'].'"  class="btn btn-sm btn-outline-secondary">عرض</a>
-                       <button type="button" class="btn btn-sm btn-outline-secondary">تسجيل</button>
+                       <a  href="sign.php?co_id='.$row['co_id'].'"  class="btn btn-sm btn-outline-secondary">تسجيل</a>
                       </div>
                     </div>
                   </div>
@@ -81,7 +83,7 @@
       
 <footer class="text-muted">
   <div class="container">
-    <div class="smallfont" align="center">
+    <div class="smallfont">
             <a href="#top" onclick="self.scrollTo(0, 0); return false;" style=""><br> الأعلى <br></a>
       </div>
   </div>
