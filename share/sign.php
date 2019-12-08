@@ -216,7 +216,14 @@ include("conn.php");
 				</div>
 				<div class="hr"></div>
 				<div class="foot-lnk">
-					<a href="#forgot"> هل نسيت كلمة المرور؟ </a>
+                    <?php
+                    if (isset($_GET["newpwd"])){
+                        if ($_GET["newpwd"] =="passwordupdated"){
+                            echo'<p class="signupsuccess">تم اعادة تعيين كلمة المرور بنجاح!</p>';
+                        }
+                    }
+                    ?>
+					<a href="reset-password.php"> هل نسيت كلمة المرور؟ </a>
 				</div>
 			</div>
 			<div class="sign-up-htm">

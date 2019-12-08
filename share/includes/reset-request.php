@@ -9,8 +9,8 @@
       $token = random_bytes(32);
       
       
-      $url = "www.fwf.com/sign/create-new-password.php?selector=" . $selector . "&validator=" . bin2hex($token);
-         , $expires = date("U") + 1800;
+      $url = "www.fwf.com/forgottenpwd/create-new-password.php?selector=" . $selector . "&validator=" . bin2hex($token);
+          $expires = date("U") + 1800;
       
       
           include 'conn.php';
@@ -40,7 +40,7 @@
           mysqli_stmt_execute($stmt);
       }
       mysqli_stmt_close($stmt);
-      mysqli_close();
+      mysqli_close($conn);
       
       $to = $u_Email;
       
@@ -52,7 +52,7 @@
       
       
       $headers = "From: learning_courve <learningcourve@gmail.com>/r/n";
-       $headers .= "Reply-To: learningcourve@gmail.com/r/n";
+       $headers .= "Reply-To: Sami@g.com/r/n";
        $headers .= "Content-type: text/html/r/n";
        
        mail($to, $subject, $message,$headers);
