@@ -2,7 +2,7 @@
 $dBServername = "localhost";
 $dBUsername = "root";
 $dBPassword = "";
-$dBName = "learningcurve";
+$dBName = "learning_curve";
 
 // Create connection
 $conn = mysqli_connect($dBServername, $dBUsername, $dBPassword, $dBName);
