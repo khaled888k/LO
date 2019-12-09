@@ -34,8 +34,8 @@
         <?php
         if (!isset($_SESSION['id'])) {
           echo '<form action="includes/login.inc.php" method="post">
-            <input type="text" name="mailuid" placeholder="E-mail/Username">
-            <input type="password" name="pwd" placeholder="Password">
+            <input type="text" name="mailuid" placeholder="E-mail/Username" required="">
+            <input type="password" name="pwd" placeholder="Password" required="">
             <button type="submit" name="login-submit">تسجيل دخول</button>
           </form>
           <a href="signup.php" class="header-signup">تسجبل</a>';
