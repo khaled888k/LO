@@ -1,6 +1,4 @@
-<?php 
-require "header.php";
-?>
+ 
 <?php include("conn.php");?>
 <html  >
     <head>
@@ -26,20 +24,30 @@ require "header.php";
     
   </head>
   <body>
+ 
+       <?php include("header.php");?>
 
-
-<main role="main">
-
-  <section class="jumbotron text-center">
-    <div class="container" >
+	<br><br>
+    
+     
+    <br>
+     <div class="container" >
         <style>
-         background-image: url("header.jpg");
+         background-image: url("img/header.jpg");
  background-color: #cccccc;
         </style>
-      <h1 class="jumbotron-heading">الحي المتعلم</h1>
+            
+     <img class="bd-placeholder-img card-img-top" width="100%" height="225" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail" src="img/download.png">
+
+    <br><br> 
     
-    </div>
-  </section>
+     
+    
+      
+      
+<main role="main">
+
+  
 
   <div class="album py-5 bg-light">
     <div class="container">

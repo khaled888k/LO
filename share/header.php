@@ -20,11 +20,14 @@
       <nav class="nav-header-main">
        
         <ul>
-          <li><a href="index.php">Home</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">About me</a></li>
-          <li><a href="#">Contact</a></li>
+          <li  >
+                        <a class="nav-link" href="index.php">الرئيسية  </a>
+                    </li>
+          <li> <a class="nav-link" href="hawl.php" target="_blank">حول</a></li>
+          <li><a class="nav-link" href="contac-%20us.php" target="_blank">اتصل بي</a></li>
+          
         </ul>
+           
       </nav>
       <div class="header-login">
        
