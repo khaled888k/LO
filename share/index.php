@@ -1,5 +1,9 @@
- <?php include("conn.php");?>
-<html  ><head>
+<?php 
+require "header.php";
+?>
+<?php include("conn.php");?>
+<html  >
+    <head>
     
     <title> الحي المتعلم </title>
   <?php include("head.php");?>
@@ -22,7 +26,6 @@
     
   </head>
   <body>
-     <?php include("header.php");?>
 
 
 <main role="main">
@@ -35,10 +38,6 @@
         </style>
       <h1 class="jumbotron-heading">الحي المتعلم</h1>
     
-      <p>
-        <a href="sign.php" class="btn btn-primary my-2">التسجيل</a>
-        <a href="sign.php" class="btn btn-secondary my-2">تسجيل الدخول</a>
-      </p>
     </div>
   </section>
 

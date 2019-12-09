@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +12,7 @@
     <style>
     body{
 	margin:0;
-	color:http://localhost/;
+	color:;
 	background:#c8c8c8;
 	font:600 16px/18px 'Open Sans',sans-serif;
 }
@@ -190,7 +191,7 @@ include("conn.php");
     
     
     
-    <form method="post">
+    <form method="POST">
     
 <div class="login-wrap">
 	<div class="login-html">
@@ -201,11 +202,11 @@ include("conn.php");
 				<div class="group">
                     
 					<label for="user" class="label"> رقم الهويه </label>
-					<input id="user" type="text" class="input">
+					<input id="user" name="username" type="text" class="input">
 				</div>
 				<div class="group">
 					<label for="pass" class="label">  كلمة المرور </label>
-					<input id="pass" type="password" class="input" data-type="password">
+					<input id="pass" name="password" type="password" class="input" data-type="password">
 				</div>
 				<div class="group">
 					<input id="check" type="checkbox" class="check" checked="">
