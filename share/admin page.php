@@ -1,4 +1,10 @@
-<?php include("conn.php");?>
+<?php 
+include("conn.php");
+require("secure.php");
+if($_SESSION["type"] != "admin"){
+    exit();
+}
+?>
 
 <html lang="en" dir="rtl">
     <head>
