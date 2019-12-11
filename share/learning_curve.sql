@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 06, 2019 at 12:29 PM
--- Server version: 10.4.8-MariaDB
--- PHP Version: 7.1.33
+-- Generation Time: Dec 11, 2019 at 01:58 PM
+-- Server version: 10.1.26-MariaDB
+-- PHP Version: 7.0.23
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -32,7 +32,7 @@ CREATE TABLE `center` (
   `ce_id` int(11) NOT NULL,
   `ce_name` varchar(255) NOT NULL,
   `ce_location` varchar(255) NOT NULL,
-  `ce_manger` varchar(255) NOT NULL
+  `ce_manger` int(255) NOT NULL COMMENT 'u_id (Admin)'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -40,9 +40,9 @@ CREATE TABLE `center` (
 --
 
 INSERT INTO `center` (`ce_id`, `ce_name`, `ce_location`, `ce_manger`) VALUES
-(1, 'الربعه', 'الربوه', 'حصه'),
-(2, 'الاول', 'الشماس', 'لولوه'),
-(3, 'الجبيل', 'مكه', 'احمد');
+(1, 'الربعه', 'الربوه', 8),
+(2, 'الاول', 'الشماس', 0),
+(3, 'الجبيل', 'مكه', 0);
 
 -- --------------------------------------------------------
 
@@ -64,7 +64,7 @@ CREATE TABLE `classes` (
 
 INSERT INTO `classes` (`c_id`, `ce_id`, `co_id`, `c_start`, `c_end`) VALUES
 (1, 1, 1, '2019-11-17', '2019-11-20'),
-(2, 1, 2, '2019-11-22', '2019-11-26'),
+(2, 1, 2, '2019-11-22', '2019-12-12'),
 (3, 2, 3, '2019-11-18', '2019-11-25');
 
 -- --------------------------------------------------------
@@ -112,7 +112,7 @@ CREATE TABLE `pwdreset` (
 --
 
 CREATE TABLE `rigster` (
-  `r_id` int(11) NOT NULL,
+  `r_id` int(11) NOT NULL COMMENT 'رقم تقائي التسجيل',
   `u_id` int(11) NOT NULL,
   `c_id` int(11) NOT NULL,
   `is_present` tinyint(1) NOT NULL
@@ -144,7 +144,6 @@ CREATE TABLE `users` (
   `u_mobile` varchar(200) NOT NULL,
   `u_education` varchar(255) NOT NULL,
   `u_type` varchar(200) NOT NULL DEFAULT 'Student',
-  `course_id` int(5) NOT NULL,
   `pass` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -152,11 +151,9 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`u_id`, `u_id_number`, `u_fullname`, `u_email`, `u_neighborhood`, `u_birthday`, `u_mobile`, `u_education`, `u_type`, `course_id`, `pass`) VALUES
-(1, '1000000001', 'Sami Uosif Ahmed', 'Sami@g.com', 'Hanan', '2019-11-13', '0123456789', 'بكالوريوس', 'Student', 1, ''),
-(5, '1000000002', 'shaker ali', 'shaker7136@gmail.com', 'saeed', '1992-02-01', '773249123', 'fff', 'Student', 1, ''),
-(6, '1000000003', 'mohammed', 'mohammed7136@gmail.com', 'mohammed', '2005-05-01', '009665424548', 'llll', 'Student', 2, ''),
-(7, '1000000008', 'sultan kasim', 'sultan@yahoo.com', 'sami', '1991-12-01', '0096654877', 'ddd', 'Student', 2, '');
+INSERT INTO `users` (`u_id`, `u_id_number`, `u_fullname`, `u_email`, `u_neighborhood`, `u_birthday`, `u_mobile`, `u_education`, `u_type`, `pass`) VALUES
+(8, '', 'ali', 'ali@example.com', '', '0000-00-00', '', '', 'Admin', '$2y$10$TuIa7LNkGCidZUdhh6UTEemFvlKdu.iadp5JDqRWJIVhL3ZEsPDkK'),
+(9, '', 'nm', 'nm@yahoo.com', '', '0000-00-00', '', '', 'Student', '$2y$10$LIELTuGkdql4pVZlPXRXneEItZySmr2nSXhz9YlIC/pqxa08A3N2G');
 
 --
 -- Indexes for dumped tables
@@ -230,13 +227,13 @@ ALTER TABLE `pwdreset`
 -- AUTO_INCREMENT for table `rigster`
 --
 ALTER TABLE `rigster`
-  MODIFY `r_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `r_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'رقم تقائي التسجيل', AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `u_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `u_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
