@@ -23,7 +23,7 @@
     </style>
     
   </head>
-  <body>
+  <body class="rtl">
  
        <?php include("header.php");?>
 
