@@ -65,6 +65,7 @@ if (isset($_POST['login-submit'])) {
           $_SESSION['id'] = $row['u_id'];
           $_SESSION['uid'] = $row['u_fullname'];
           $_SESSION['email'] = $row['u_email'];
+          $_SESSION['type'] = $row['u_type'];
           // Now the user is registered as logged in and we can now take them back to the front page! :)
           header("Location: ../index.php?login=success");
           exit();

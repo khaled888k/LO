@@ -45,6 +45,13 @@
             <button type="submit" name="login-submit">تسجيل خروج</button>
           </form>';
         }
+          
+          if(@$_SESSION['type'] == "Admin"){
+              
+              echo "<a href='admin_page.php'>الادارة</a>";
+          }
+          
+          
         ?>
           <br>
       </div>

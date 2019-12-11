@@ -55,7 +55,7 @@
       <div class="row" dir="rtl">
 
       <?php
-      $q = "select * from courses";
+      $q = "SELECT * FROM courses co, classes c  WHERE co.co_id = c.co_id AND c.c_end > NOW()";
       $result = mysqli_query( $conn,$q );
 
       while($row = mysqli_fetch_array($result)){
@@ -63,11 +63,12 @@
               <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
                   <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="img/'.$row["course_image"].'" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">'.$row["co_name"].'</text>
+                  '.$row["c_start"].'
                   <div class="card-body">
                     <div class="navbar-nav mr-auto">
                       <div class="btn-group">
                        <a  href="show_course_detail.php?co_id='.$row['co_id'].'"  class="btn btn-sm btn-outline-secondary">عرض</a>
-                       <button type="button" class="btn btn-sm btn-outline-secondary">تسجيل</button>
+                       <a href="enroll.php?cid='.$row["c_id"].'"><button type="button" class="btn btn-sm btn-outline-secondary">تسجيل</button></a>
                       </div>
                     </div>
                   </div>
