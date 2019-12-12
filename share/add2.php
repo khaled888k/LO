@@ -74,7 +74,7 @@ tr:nth-child(even) {
     <br><br> 
     
      
-    
+    <a class="btn btn-md btn-outline-success"  target="_blank" href="addcenter.php"> اضافة المركز</a>
       
 <select  class="btn btn-secondary my-2" onchange="location='?ce_id='+value">
             <option value="">اختر المركز</option>
@@ -96,10 +96,10 @@ tr:nth-child(even) {
     }
     
     ?>
-    
-    
+     
 
 </select>
+    
 
      
         
@@ -119,7 +119,7 @@ tr:nth-child(even) {
                                  
                                         
            
-          <td class="column6" ><a class="btn btn-md btn-outline-success"  target="_blank" href="courses.php"> اضافة الدورات</a></td>
+           <a class="btn btn-md btn-outline-success"  target="_blank" href="addcourses.php"> اضافة الدورات</a> 
         
          
                                 
@@ -136,6 +136,7 @@ tr:nth-child(even) {
        
        $result = mysqli_query($conn, "SELECT * FROM classes c , users u, rigster r  WHERE r.c_id = c.c_id AND u.u_id = r.u_id AND r.c_id = $_GET[ce_id]");
       while($row = mysqli_fetch_array($result)){
+          
        echo' 
         <tr> 
           

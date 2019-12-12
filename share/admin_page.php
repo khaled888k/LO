@@ -29,29 +29,29 @@ include("conn.php");
 
 </head>
 
-<body>
+<body class="rtl">
     <?php 
       include("header.php");
 if(@$_SESSION["type"] != "Admin"){
     exit();
 }
       ?>
-    <header>
+     
 
-    </header>
+    <br>
+     <div class="container" >
+        <style>
+         background-image: url("img/header.jpg");
+ background-color: #cccccc;
+        </style>
+            
+     <img class="bd-placeholder-img card-img-top" width="100%" height="225" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail" src="img/download.png">
 
-    <main role="main">
-
-        <section class="jumbotron text-center">
-            <div class="container">
-                <style>
-                    background-image: url("header.jpg");
-                    background-color: #cccccc;
-
-                </style>
-
-                <img class="bd-placeholder-img card-img-top" width="100%" height="225" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail" src="img/download.png">
-
+    <br><br> 
+    
+     
+    
+                        <a   class="btn btn-md btn-outline-success"  target="_blank" href="add2.php?course_id='.$row['co_id'].'">اضافة الدوارت او المركز</a>
 
                 <div class="album py-5 bg-light">
                     <div class="container">
@@ -88,9 +88,8 @@ if(@$_SESSION["type"] != "Admin"){
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    </main>
+           
+    </div>
 
     <footer class="text-muted">
         <div class="container">
