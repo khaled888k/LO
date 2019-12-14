@@ -51,14 +51,11 @@ textarea {
 }
 [type="submit"]:hover { background:#CC4949; }
     </style>
-    <body>
-        <?php include("header.php");?>
+  <body class="rtl">
+    <?php include("header.php");?>
 
-                    <br>                  
-                    <br>
-                    <br>
-                    <br>
-
+                   
+                   
     <form>      
   <input name="name" type="text" class="feedback-input" placeholder="الاسم" />   
   <input name="email" type="text" class="feedback-input" placeholder="البريد الاكتروني " />

@@ -14,7 +14,7 @@ if (isset($_POST['login-submit'])) {
 
   // We check for any empty inputs. (PS: This is where most people get errors because of typos! Check that your code is identical to mine. Including missing parenthesis!)
   if (empty($mailuid) || empty($password)) {
-    header("Location: ../index.php?error=emptyfields&mailuid=".$mailuid);
+    header("Location: ../index.php?error=emptyfields&$mailuid=".$mailuid);
     exit();
   }
   else {
