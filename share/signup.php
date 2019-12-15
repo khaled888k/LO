@@ -1,9 +1,14 @@
 <?php
   
   require "header.php";
-?>
+       
 
-    <main>
+?>
+<link rel="stylesheet" href="css/bootstrap-rtl.css">
+    <link rel="stylesheet" href="css/bootstrap-rtl.css.map">
+    <link rel="stylesheet" href="css/bootstrap-rtl.min.css">
+    <link rel="stylesheet" href="css/bootstrap-rtl.min.css.map">
+    <main class="rtl">
       <div class="wrapper-main">
         <section class="section-default">
           <h1>تسجيل</h1>
@@ -36,31 +41,75 @@
             }
           }
           ?>
-          <form class="form-signup" action="includes/signup.inc.php" method="post">
+          <form class="form-signup" action="includes/signup.inc.php" method="post"> 
             <?php
             // Here we check if the user already tried submitting data.
 
             // We check username.
             if (!empty($_GET["uid"])) {
-              echo '<input type="text" name="uid" placeholder="Username" value="'.$_GET["uid"].'">';
+              echo '<input    maxlength="15" minlength="4" name="uid" pattern="^[a-zA-Z0-9_.-]*$" placeholder="اسم المستخدم" required="" type="text" value="'.$_GET["uid"].'"/>';
+                
             }
             else {
-              echo '<input type="text" name="uid" placeholder="Username">';
+              echo '<input maxlength="15" minlength="4" name="uid" pattern="^[a-zA-Z0-9_.-]*$" placeholder="اسم المستخدم" required="" type="text">';
             }
+              
+               if (!empty($_GET["u_id_number"])) {
+              echo '<input    maxlength="10" minlength="10" name="u_id_number"   placeholder="رقم السجل المدني	" required="" type="number" value="'.$_GET["u_id_number"].'"/>';
+                
+            }
+            else {
+              echo '<input maxlength="10" minlength="10" name="u_id_number"   placeholder="رقم السجل المدني	" required="" type="number">';
+            }
+              
+              
+              if (!empty($_GET["u_neighborhood"])) {
+              echo '<input      minlength="4" name="u_neighborhood"  placeholder="الحي" required="" type="text" value="'.$_GET["u_neighborhood"].'"/>';
+                
+            }
+            else {
+              echo '<input   minlength="4" name="u_neighborhood"  placeholder="الحي" required="" type="text">';
+            }
+              
+                  if (!empty($_GET["u_mobile"])) {
+                  echo '<input    maxlength="14" minlength="10" name="u_mobile"   placeholder="الرقم الجوال" required="" type="tel" value="'.$_GET["u_mobile"].'"/>';
+
+                }
+                else {
+                  echo '<input maxlength="14" minlength="10" name="u_mobile"   placeholder="الرقم الجوال" required="" type="tel">';
+                }
+              
+              
+                  if (!empty($_GET["u_education"])) {
+                  echo '<input      name="u_education"   placeholder="المستوى التعليمي	" required="" type="text" value="'.$_GET["u_education"].'"/>';
+                      
+                }
+                else {
+                  echo '<input   name="u_education"   placeholder="المستوى التعليمي	" required="" type="text">';
+                }
+              
+                  if (!empty($_GET["u_birthday"])) {
+                  echo '<input      name="u_birthday"   placeholder="تاريخ الميلاد	" required="" type="date" value="'.$_GET["u_birthday"].'"/>';
+
+                }
+                else {
+                  echo '<input   name="u_birthday"   placeholder="تاريخ الميلاد" required="" type="date">';
+                }
+              
 
             // We check e-mail.
             if (!empty($_GET["mail"])) {
-              echo '<input type="text" name="mail" placeholder="E-mail" value="'.$_GET["mail"].'">';
+              echo '<input type="text" name="mail" placeholder="الايميل"  required="" value="'.$_GET["mail"].'">';
             }
             else {
-              echo '<input type="text" name="mail" placeholder="E-mail">';
+              echo '<input type="text" name="mail"  required="" placeholder="الايميل">';
             }
             ?>
-            <input type="password" name="pwd" placeholder="Password">
-            <input type="password" name="pwd-repeat" placeholder="Repeat password">
+            <input type="password" name="pwd" placeholder="كلمة مرور"  minlength="6">
+            <input type="password" name="pwd-repeat" placeholder="اعادة كلمة مرور"  minlength="6">
             <button type="submit" name="signup-submit">تسجيل</button>
           </form>
-         
+            
         </section>
       </div>
     </main>
