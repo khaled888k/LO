@@ -16,28 +16,28 @@
           // Here we create an error message if the user made an error trying to sign up.
           if (isset($_GET["error"])) {
             if ($_GET["error"] == "emptyfields") {
-              echo '<p class="signuperror">Fill in all fields!</p>';
+              echo '<p class="signuperror">املاء جميع الخانات!</p>';
             }
             else if ($_GET["error"] == "invaliduidmail") {
-              echo '<p class="signuperror">Invalid username and e-mail!</p>';
+              echo '<p class="signuperror">اسم المستخدم و كلمة المرور خطاء!</p>';
             }
             else if ($_GET["error"] == "invaliduid") {
-              echo '<p class="signuperror">Invalid username!</p>';
+              echo '<p class="signuperror">اسم المستخدم خطاء!</p>';
             }
             else if ($_GET["error"] == "invalidmail") {
-              echo '<p class="signuperror">Invalid e-mail!</p>';
+              echo '<p class="signuperror">الايميل خطاء!</p>';
             }
             else if ($_GET["error"] == "passwordcheck") {
-              echo '<p class="signuperror">Your passwords do not match!</p>';
+              echo '<p class="signuperror">كلمة المرور لا تتطابق!</p>';
             }
             else if ($_GET["error"] == "usertaken") {
-              echo '<p class="signuperror">Username is already taken!</p>';
+              echo '<p class="signuperror">اسم المستخدم موجود مسبقا!</p>';
             }
           }
           // Here we create a success message if the new user was created.
           else if (isset($_GET["signup"])) {
             if ($_GET["signup"] == "success") {
-              echo '<p class="signupsuccess">Signup successful!</p>';
+              echo '<p class="signupsuccess">تم التسجيل بنجاح!</p>';
             }
           }
           ?>
@@ -47,19 +47,19 @@
 
             // We check username.
             if (!empty($_GET["uid"])) {
-              echo '<input    maxlength="15" minlength="4" name="uid" pattern="^[a-zA-Z0-9_.-]*$" placeholder="اسم المستخدم" required="" type="text" value="'.$_GET["uid"].'"/>';
+              echo '<input    maxlength="50" minlength="4" name="uid" pattern="^[a-zA-Z0-9]*$" placeholder="اسم المستخدم" required="" type="text" value="'.$_GET["uid"].'"/>';
                 
             }
             else {
-              echo '<input maxlength="15" minlength="4" name="uid" pattern="^[a-zA-Z0-9_.-]*$" placeholder="اسم المستخدم" required="" type="text">';
+              echo '<input maxlength="50" minlength="4" name="uid" pattern="^[a-zA-Z0-9]*$" placeholder="اسم المستخدم" required="" type="text">';
             }
               
                if (!empty($_GET["u_id_number"])) {
-              echo '<input    maxlength="10" minlength="10" name="u_id_number"   placeholder="رقم السجل المدني	" required="" type="number" value="'.$_GET["u_id_number"].'"/>';
+              echo '<input    maxlength="10" minlength="10" name="u_id_number"   placeholder="رقم السجل المدني	" required="" type="text" value="'.$_GET["u_id_number"].'"/>';
                 
             }
             else {
-              echo '<input maxlength="10" minlength="10" name="u_id_number"   placeholder="رقم السجل المدني	" required="" type="number">';
+              echo '<input maxlength="10" minlength="10" name="u_id_number"   placeholder="رقم السجل المدني	" required="" type="text">';
             }
               
               
