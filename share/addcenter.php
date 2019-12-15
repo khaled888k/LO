@@ -25,11 +25,11 @@
             </tr>       
                 
             <tr>
-            <td> <label for="ce_location" style="text-align:right;">الحي :</label ></td><td><input class="form-control" name="ce_location" type="text"  ></td>
+            <td> <label for="ce_location" style="text-align:right;">الحي :</label ></td><td><input class="form-control" name="ce_location" type="text" required ></td>
             </tr>
             
          <tr>
-            <td><label for="ce_manger">اسم المديره :</label><br></td><td> <input  class="form-control" name="ce_manger" type="text"  ></td>
+            <td><label for="ce_manger">اسم المديره :</label><br></td><td> <input  class="form-control" name="ce_manger" type="text"  required></td>
             </tr> 
             
             <tr>

@@ -37,22 +37,39 @@
         <div style="float:right; margin-right:10%;" >
         <table style="margin-right:10px;">
         <tr>
-        <td> <label for="fullname" style="text-align:right;">اسم الدورة 	 :</label></td><td><input  class="form-control" type="text" name="fullname" required value="'.$row["co_name"].'"></td>
+        <td> <label for="fullname" style="text-align:right;">اسم الدورة 	 :</label></td><td><text > '.$row["co_name"].' </text></td>
         </tr>       
         
             
         <tr>
-        <td> <label for="cmail" style="text-align:right;">تفاصيل الدورة :</label ></td><td><input class="form-control" name="cmail" type="email" value="'.$row["co_details"].'"></td>
+        <td> <label for="cmail" style="text-align:right;">تفاصيل الدورة :</label ></td><td><text > '.$row["co_details"].' </text> </td>
         </tr>
         
 
         <tr>
-        <td> <label for="neighborhood" style="text-align:right;">عدد الساعات :</label></td><td><input  class="form-control"name="neighborhood" type="text" value="'.$row["co_hours"].'"></td>
+        <td> <label for="neighborhood" style="text-align:right;">عدد الساعات :</label></td><td> <text > '.$row["co_hours"].' </text></td>
         </tr>
             
-        <tr>
-        <td><label for="mobile">إسم المدرب/ه</label><br></td><td> <input  class="form-control" name="mobile" type="text" value="'.$row["lecturer_name"].'"></td>
-        </tr> 
+            <tr>
+            <td><label for="mobile">إسم المدرب :</label><br></td><td> <text > '.$row["lecturer_name"].' </text> </td>
+            </tr> 
+            
+             <ul> ';
+             $result = mysqli_query($conn, "SELECT * FROM classes WHERE co_id= ".$row["co_id"] ."");
+             while($row2 = mysqli_fetch_array($result)){
+             echo' 
+                 <tr>
+                <td><label for="mobile">البدايه :</label><br></td><td> <text > '.$row2["c_start"].' </text> </td>
+                </tr>
+                <tr>
+                <td><label for="mobile">النهايه :</label><br></td><td> <text > '.$row2["c_end"].' </text> </td>
+                </tr> 
+            ';
+             }
+           echo '</ul>
+            
+            
+                 
         
        
 

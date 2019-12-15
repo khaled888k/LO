@@ -8,8 +8,7 @@
     @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 body { background:rgb(30,30,40); }
-form { max-width:420px; margin:50px auto; }
-
+ 
 .feedback-input {
   color:black;
   font-family: Helvetica, Arial, sans-serif;
@@ -33,30 +32,14 @@ textarea {
   line-height: 150%;
   resize:vertical;
 }
-
-[type="submit"] {
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-  width: 100%;
-  background:#CC6666;
-  border-radius:5px;
-  border:0;
-  cursor:pointer;
-  color:red;
-  font-size:24px;
-  padding-top:10px;
-  padding-bottom:10px;
-  transition: all 0.3s;
-  margin-top:-4px;
-  font-weight:700;
-}
-[type="submit"]:hover { background:#CC4949; }
+ 
     </style>
   <body class="rtl">
     <?php include("header.php");?>
 
                    
                    
-    <form>      
+    <form style=" max-width:420px; margin:50px auto;">      
   <input name="name" type="text" class="feedback-input" placeholder="الاسم" />   
   <input name="email" type="text" class="feedback-input" placeholder="البريد الاكتروني " />
   <textarea name="text" class="feedback-input" placeholder="تعليقك"></textarea>

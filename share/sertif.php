@@ -5,6 +5,7 @@
 <html>
 <head>
     <title> الحي المتعلم </title>
+    <?php include("head.php");?>
 
     <meta charset="UTF-8">
 </head>
@@ -37,7 +38,8 @@
        <br><br>
        <span style="font-size:25px"><i>تشهد ادارة الحي المتعلم بأن الطالبة</i></span>
        <br><br>
-       <span style="font-size:30px ;"><b style="color:red;">'.$row['u_fullname'].'</b> اسم الطالبة:</span><br/><br/>
+      <span style="font-size:30px ;"> اسم الطالبة:</span> 
+       <span style="font-size:30px ;"><b style="color:red;">'.$row['u_fullname'].'</b>  </span><br/><br/>
        <span style="font-size:25px"><i>قد حضرت دورة/دورات بعنوان</i>';
             $result = mysqli_query($conn, "select courses.co_name from courses , users , rigster where users.u_id = rigster.u_id and courses.co_id = rigster.c_id and users.u_id = ".$row["u_id"] ."");
             while($row = mysqli_fetch_array($result)){
