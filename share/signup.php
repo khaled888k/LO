@@ -4,10 +4,6 @@
        
 
 ?>
-<link rel="stylesheet" href="css/bootstrap-rtl.css">
-    <link rel="stylesheet" href="css/bootstrap-rtl.css.map">
-    <link rel="stylesheet" href="css/bootstrap-rtl.min.css">
-    <link rel="stylesheet" href="css/bootstrap-rtl.min.css.map">
     <main class="rtl">
       <div class="wrapper-main">
         <section class="section-default">
