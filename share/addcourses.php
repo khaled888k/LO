@@ -25,7 +25,6 @@
         
         
             $q = "INSERT INTO courses(co_name,co_details,course_image,co_hours,lecturer_name) VALUES('$_POST[co_name]','$_POST[co_details]','$_POST[course_image]','$_POST[co_hours]','$_POST[lecturer_name]')";
-    
         mysqli_query($conn, $q);
         echo mysqli_error($conn);
           
@@ -41,11 +40,13 @@
     }
     
     ?> 
+       
     <br><br><br><br>
     
     
         <table style="margin-right:10px;">
-            <tr>
+
+             <tr>
             <td> <label for="co_name" style="text-align:right;">اسم الدوره :</label></td><td><input  class="form-control" type="text" name="co_name" required ><br></td>
             </tr>       
                 
@@ -64,7 +65,20 @@
             <td><label for="lecturer_name"> اسم المدربه :</label><br></td><td> <input  class="form-control" name="lecturer_name" type="text" required ></td>
             </tr> 
             
-            
+<?php
+    
+    if(isset($_POST['submit'])){
+        
+        
+                   $qw = "INSERT INTO classes (c_start, c_end ) VALUES ( '$_POST[c_start]', '$_POST[c_end]' )";
+        mysqli_query($conn, $qw);
+        echo mysqli_error($conn);
+          
+       
+        
+    }
+    
+    ?> 
             <tr>
             <td><label for="c_start"> تاريخ البدايه :</label><br></td><td> <input  class="form-control" name="c_start" type="date" required ></td>
             </tr> 
