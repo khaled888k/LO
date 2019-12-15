@@ -46,24 +46,34 @@
     
         <table style="margin-right:10px;">
             <tr>
-            <td> <label for="co_name" style="text-align:right;">اسم 	 :</label></td><td><input  class="form-control" type="text" name="co_name" required ><br></td>
+            <td> <label for="co_name" style="text-align:right;">اسم الدوره :</label></td><td><input  class="form-control" type="text" name="co_name" required ><br></td>
             </tr>       
                 
             <tr>
-            <td> <label for="co_details" style="text-align:right;">دوره :</label ></td><td><input class="form-control" name="co_details" type="text" required  ></td>
+            <td> <label for="co_details" style="text-align:right;">تفاصيل الدوره :</label ></td><td><input class="form-control" name="co_details" type="text" required  ></td>
             </tr>
             
          <tr>
             <td><label for="course_image">اضافة الصوره :</label><br></td><td> <input  class="form-control" name="course_image" type="file" required ></td>
             </tr> 
                <tr>
-            <td> <label for="co_hours">الساعات :</label></td><td> <input  name="co_hours" class="form-control" type="number"  required></td>
+            <td> <label for="co_hours">ساعات الدوره	 :</label></td><td> <input  name="co_hours" class="form-control" type="number"  required></td>
             </tr> 
         
             <tr>
             <td><label for="lecturer_name"> اسم المدربه :</label><br></td><td> <input  class="form-control" name="lecturer_name" type="text" required ></td>
             </tr> 
             
+            
+            <tr>
+            <td><label for="c_start"> تاريخ البدايه :</label><br></td><td> <input  class="form-control" name="c_start" type="date" required ></td>
+            </tr> 
+            
+            
+            <tr>
+            <td><label for="c_end"> تاريخ النهايه :</label><br></td><td> <input  class="form-control" name="c_end" type="date" required ></td>
+            </tr> 
+           
             <tr>
                    
             </tr>
