@@ -47,11 +47,11 @@
 
             // We check username.
             if (!empty($_GET["uid"])) {
-              echo '<input    maxlength="50" minlength="4" name="uid" pattern="^[a-zA-Z0-9]*$" placeholder="اسم المستخدم" required="" type="text" value="'.$_GET["uid"].'"/>';
+              echo '<input    maxlength="50" minlength="4" name="uid" pattern="^[a-zA-Z0-9_.-]*$" placeholder="اسم المستخدم" required="" type="text" value="'.$_GET["uid"].'"/>';
                 
             }
             else {
-              echo '<input maxlength="50" minlength="4" name="uid" pattern="^[a-zA-Z0-9]*$" placeholder="اسم المستخدم" required="" type="text">';
+              echo '<input maxlength="50" minlength="4" name="uid" pattern="^[a-zA-Z0-9_.-]*$" placeholder="اسم المستخدم" required="" type="text">';
             }
               
                if (!empty($_GET["u_id_number"])) {
