@@ -1,7 +1,8 @@
 <?php
- 
+ //first we start a session which allow for us to store information as SESSION bariables.
+
   session_start();
- 
+ //"require" creates an error message and stops the script. "include" creates an error and continues the script.
   require "includes/dbh.inc.php";
 ?>
 <!DOCTYPE html>
@@ -15,7 +16,7 @@
   </head>
   <body>
 
-   
+ 
     <header>
       <nav class="nav-header-main">
        
@@ -30,7 +31,7 @@
            
       </nav>
       <div class="header-login">
-       
+      
         <?php
         if (!isset($_SESSION['id'])) {
           echo '<form action="includes/login.inc.php" method="post">
