@@ -62,7 +62,7 @@
           if(!isset($_SESSION["id"])){
         $alert = " onclick=\"alert('الرجاء تسجيل الدخول أولا'); return false\"";
           }
-      $q = "SELECT * FROM courses co, classes c  WHERE co.co_id = c.co_id AND c.c_end > NOW()";
+      $q = "SELECT * FROM courses co, classes c WHERE co.co_id = c.co_id AND c.c_end > NOW()";
       $result = mysqli_query( $conn,$q );
 
       while($row = mysqli_fetch_array($result)){
@@ -80,7 +80,6 @@
                                      <div class="navbar-nav mr-auto">
                                          <div class="btn-group">
                                              <a href="show_course_detail.php?co_id=<?= $row['co_id'] ?>" class="btn btn-sm btn-outline-secondary">عرض</a>';
-
                                              <a href="enroll.php?cid=<?= $row["c_id"]?>" <?= $alert ?>><button type="button" class="btn btn-sm btn-outline-secondary">تسجيل</button></a>
                                          </div>
                                      </div>
