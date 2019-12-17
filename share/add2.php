@@ -56,7 +56,7 @@ tr:nth-child(even) {
      
 </head>
     
-<body  dir="rtl">
+<body  class="rtl">
          <?php include("header.php");?>
 
 	<br><br>
@@ -102,72 +102,13 @@ tr:nth-child(even) {
     
 
      
-        
+          <a class="btn btn-md btn-outline-success"  target="_blank" href="addcourses.php"> اضافة الدورات</a> 
          
-          <?php if(isset($_GET["ce_id"])){ ?>
-	<div class="limiter">
-		<div class="container-table100">
-			<div class="wrap-table100">
-				<div class="table100">
-					<table>
-						<thead>
-							<tr class="table100-head">
-								 
-								<th class="column3"> التاريخ </th>
-								<th class="column4">  الدورات </th>
-                                 
-                                 
-                                        
-           
-           <a class="btn btn-md btn-outline-success"  target="_blank" href="addcourses.php"> اضافة الدورات</a> 
-        
-         
-                                
-								 
-                                
-							</tr>
-						</thead>
-						<tbody>
-                            
-                             
-     <?php
-
-    
-       
-       $result = mysqli_query($conn, "SELECT * FROM classes c , users u, rigster r  WHERE r.c_id = c.c_id AND u.u_id = r.u_id AND r.c_id = $_GET[ce_id]");
-      while($row = mysqli_fetch_array($result)){
           
-       echo' 
-        <tr> 
-          
-          <td> '.$row['u_birthday'] .'</td>
-          <td style="text-align:right;"> 
-            <ul> ';
-             $result = mysqli_query($conn, "select courses.co_name from courses , users , rigster where users.u_id = rigster.u_id and courses.co_id = rigster.c_id and users.u_id = ".$row["u_id"] ."");
-             while($row2 = mysqli_fetch_array($result)){
-             echo' 
-                <li>'.$row2["co_name"].'</li>
-            ';
-             }
-            
-         ?>
-  <?php  }
-    
-        ?>                    
-								 
-                       <?php } ?>     
-                            
-                            
-                            
-								
-						</tbody>
-					</table>
-				</div>
-			</div>
-		</div>
+                         
 	</div>
  
-    </div>
+     
 	 
 </body>
 </html>

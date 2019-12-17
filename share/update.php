@@ -25,6 +25,12 @@
         $q = "UPDATE users SET u_fullname = '".$_POST['fullname']."', u_email= '".$_POST['cmail']."' , u_neighborhood= '".$_POST['neighborhood']."', u_birthday= '".$_POST['birthday']."', u_mobile= '".$_POST['mobile']."', u_education='".$_POST['education']."' WHERE u_id= '".$_POST['id']."'";
         mysqli_query($conn, $q);
         echo mysqli_error($conn);
+        ?>
+         <script>
+    
+    alert("تم اضافة التعديل بنجاح")
+    </script>
+    <?php
     }
     ?>
 
@@ -82,7 +88,7 @@
              while($row2 = mysqli_fetch_array($result)){
              echo' 
                  
-                 <td><label for="education"> الدورات :</label><br></td><td> <input  class="form-control" name="education" type="text" value="'.$row2["co_name"].'"></td>
+                 <td><label for="education"> الدورات :</label><br></td><td><text > '.$row2["co_name"].' </text></td> 
             ';
              }
            echo '
@@ -108,6 +114,9 @@
     </form>
 
     '; 
+         
+         
+        
         }
 
     ?>

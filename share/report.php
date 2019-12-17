@@ -56,8 +56,13 @@ tr:nth-child(even) {
      
 </head>
     
-<body  dir="rtl">
-         <?php include("header.php");?>
+<body  class="rtl">
+         <?php 
+      include("header.php");
+if(@$_SESSION["type"] != "Admin"){
+    exit();
+}
+      ?>
 
 	<br><br>
     
@@ -81,7 +86,7 @@ tr:nth-child(even) {
 
     <?php
     
-           $result = mysqli_query($conn, "SELECT * FROM center");
+           $result = mysqli_query($conn, "SELECT  * FROM classes cl, courses co, center ce  WHERE  ce.ce_id = cl.ce_id AND co.co_id = cl.co_id AND ce.ce_manger=$_SESSION[id] ORDER BY ce_name DESC LIMIT 0, 1 ");
 
     while($row = mysqli_fetch_assoc($result)){
         $selected = "";
