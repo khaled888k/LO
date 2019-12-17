@@ -12,14 +12,14 @@ if (isset($_POST['login-submit'])) {
 
   // Then we perform a bit of error handling to make sure we catch any errors made by the user. Here you can add ANY error checks you might think of! I'm just checking for a few common errors in this tutorial so feel free to add more. If we do run into an error we need to stop the rest of the script from running, and take the user back to the login form with an error message.
 
-  // We check for any empty inputs. (PS: This is where most people get errors because of typos! Check that your code is identical to mine. Including missing parenthesis!)
+  // We check for any empty inputs.
   if (empty($mailuid) || empty($password)) {
     header("Location: ../index.php?error=emptyfields&$mailuid=".$mailuid);
     exit();
   }
   else {
 
-    // If we got to this point, it means the user didn't make an error! :)
+
 
     // Next we need to get the password from the user in the database that has the same username as what the user typed in, and then we need to de-hash it and check if it matches the password the user typed into the login form.
 
