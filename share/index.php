@@ -79,7 +79,7 @@
                                  <div class="card-body">
                                      <div class="navbar-nav mr-auto">
                                          <div class="btn-group">
-                                             <a href="show_course_detail.php?co_id=<?= $row['co_id'] ?>" class="btn btn-sm btn-outline-secondary">عرض</a>';
+                                             <a href="show_course_detail.php?co_id=<?= $row['co_id'] ?>" class="btn btn-sm btn-outline-secondary">عرض</a>
                                              <a href="enroll.php?cid=<?= $row["c_id"]?>" <?= $alert ?>><button type="button" class="btn btn-sm btn-outline-secondary">تسجيل</button></a>
                                          </div>
                                      </div>
